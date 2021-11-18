@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         9Anime.vc
 // @description  Simplify website for speed and usability.
-// @version      1.0.0
-// @match        *://9anime.vc/*
-// @match        *://*.9anime.vc/*
+// @version      1.0.1
+// @match        *://9anime.vc/watch/*
+// @match        *://*.9anime.vc/watch/*
 // @icon         https://9anime.vc/images/favicon.png
 // @run-at       document-end
 // @grant        unsafeWindow
