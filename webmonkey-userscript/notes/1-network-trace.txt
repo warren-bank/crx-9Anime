@@ -1,0 +1,133 @@
+--------------------------------------------------------------------------------
+// https://9anime.vc/watch/claymore-844
+// https://9anime.vc/watch/claymore-844?ep=14677
+
+--------------------------------------------------------------------------------
+// https://9anime.vc/ajax/episode/list/844
+
+{"status":true,"html":"\n<div class=\"block_area-content\">\n    \n        <div id=\"episodes-page-1\" class=\"episodes-ul\" data-page=\"1\" style=\"display: none;\">\n            \n            <a href=\"/watch/claymore-844?ep=14677\" title=\"Great Sword\" class=\"item ep-item\"\n               data-number=\"1\"\n               data-id=\"14677\">\n                <div class=\"order\">1</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14678\" title=\"The Black Card\" class=\"item ep-item\"\n               data-number=\"2\"\n               data-id=\"14678\">\n                <div class=\"order\">2</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14679\" title=\"The Darkness in Paradise\" class=\"item ep-item\"\n               data-number=\"3\"\n               data-id=\"14679\">\n                <div class=\"order\">3</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14680\" title=\"Clare&#39;s Awakening\" class=\"item ep-item\"\n               data-number=\"4\"\n               data-id=\"14680\">\n                <div class=\"order\">4</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14681\" title=\"Teresa of the Faint Smile\" class=\"item ep-item\"\n               data-number=\"5\"\n               data-id=\"14681\">\n                <div class=\"order\">5</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14682\" title=\"Teresa and Clare\" class=\"item ep-item\"\n               data-number=\"6\"\n               data-id=\"14682\">\n                <div class=\"order\">6</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14683\" title=\"Marked for Death\" class=\"item ep-item\"\n               data-number=\"7\"\n               data-id=\"14683\">\n                <div class=\"order\">7</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14684\" title=\"Awakening\" class=\"item ep-item\"\n               data-number=\"8\"\n               data-id=\"14684\">\n                <div class=\"order\">8</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14685\" title=\"Those Who Rend Asunder (Part 1)\" class=\"item ep-item\"\n               data-number=\"9\"\n               data-id=\"14685\">\n                <div class=\"order\">9</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14686\" title=\"Those Who Rend Asunder (Part 2)\" class=\"item ep-item\"\n               data-number=\"10\"\n               data-id=\"14686\">\n                <div class=\"order\">10</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14687\" title=\"Those Who Rend Asunder (Part 3)\" class=\"item ep-item\"\n               data-number=\"11\"\n               data-id=\"14687\">\n                <div class=\"order\">11</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14688\" title=\"The Endless Gravestones (Part 1)\" class=\"item ep-item\"\n               data-number=\"12\"\n               data-id=\"14688\">\n                <div class=\"order\">12</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14689\" title=\"The Endless Gravestones (Part 2)\" class=\"item ep-item\"\n               data-number=\"13\"\n               data-id=\"14689\">\n                <div class=\"order\">13</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14690\" title=\"Qualified to Fight\" class=\"item ep-item\"\n               data-number=\"14\"\n               data-id=\"14690\">\n                <div class=\"order\">14</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14691\" title=\"The Witch&#39;s Maw (Part 1)\" class=\"item ep-item\"\n               data-number=\"15\"\n               data-id=\"14691\">\n                <div class=\"order\">15</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14692\" title=\"The Witch&#39;s Maw (Part 2)\" class=\"item ep-item\"\n               data-number=\"16\"\n               data-id=\"14692\">\n                <div class=\"order\">16</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14693\" title=\"The Witch&#39;s Maw (Part 3)\" class=\"item ep-item\"\n               data-number=\"17\"\n               data-id=\"14693\">\n                <div class=\"order\">17</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14694\" title=\"The Carnage in the North (Part 1)\" class=\"item ep-item\"\n               data-number=\"18\"\n               data-id=\"14694\">\n                <div class=\"order\">18</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14695\" title=\"The Carnage in the North (Part 2)\" class=\"item ep-item\"\n               data-number=\"19\"\n               data-id=\"14695\">\n                <div class=\"order\">19</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14696\" title=\"The Carnage in the North (Part 3)\" class=\"item ep-item\"\n               data-number=\"20\"\n               data-id=\"14696\">\n                <div class=\"order\">20</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14697\" title=\"Invasion of Pieta (Part 1)\" class=\"item ep-item\"\n               data-number=\"21\"\n               data-id=\"14697\">\n                <div class=\"order\">21</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14698\" title=\"Invasion of Pieta (Part 2)\" class=\"item ep-item\"\n               data-number=\"22\"\n               data-id=\"14698\">\n                <div class=\"order\">22</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14699\" title=\"Critical Point (Part 1)\" class=\"item ep-item\"\n               data-number=\"23\"\n               data-id=\"14699\">\n                <div class=\"order\">23</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14700\" title=\"Critical Point (Part 2)\" class=\"item ep-item\"\n               data-number=\"24\"\n               data-id=\"14700\">\n                <div class=\"order\">24</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14701\" title=\"For Whose Sake\" class=\"item ep-item\"\n               data-number=\"25\"\n               data-id=\"14701\">\n                <div class=\"order\">25</div>\n            </a>\n            \n            <a href=\"/watch/claymore-844?ep=14702\" title=\"To the Successors\" class=\"item ep-item\"\n               data-number=\"26\"\n               data-id=\"14702\">\n                <div class=\"order\">26</div>\n            </a>\n            \n            <div class=\"clearfix\"></div>\n        </div>\n    \n</div>\n<script>\n    $(document).on(\"click\", \".ep-page-item\", function () {\n        $('.ep-page-item').removeClass('active');\n        $(this).addClass('active');\n        $('.episodes-ul').hide();\n        $('#episodes-page-' + $(this).data('page')).show();\n    });\n\n    $('.ep-item').click(function (e) {\n        e.preventDefault();\n        var epId = $(this).data('id');\n\n        // set current episode watching to localstorage\n        localStorage.setItem('watching.' + movieId, epId);\n\n        history.pushState({}, '', window.location.origin + window.location.pathname + '?ep=' + epId);\n        $('.ep-item').removeClass('active');\n        $(this).addClass('active');\n        $('#cm-episode-number').text($(this).find('.order').text());\n        (userSettings.auto_load_comments === \"1\" || clickedLoadComment) && loadDisqus();\n        $('#servers-content').html('<div class=\"loading-relative\"><div class=\"loading\"><div class=\"span1\"></div><div class=\"span2\"></div><div class=\"span3\"></div></div></div>');\n        $('#episode-guide').empty();\n        $('#iframe-embed').hide();\n        $('#iframe-embed').attr('src', '');\n        $('#embed-loading').show();\n        $.get('/ajax/episode/servers?episodeId=' + epId, function (res) {\n            $('#servers-content').html(res.html);\n            $('#embed-loading').hide();\n\n            var currentSource = localStorage.getItem('currentSource');\n            if (currentSource && $('.servers-' + currentSource).length > 0) {\n                var currentServer = localStorage.getItem('currentServer');\n                var svEl = $('.servers-' + currentSource + ' .server-item[data-server-id=' + currentServer + ']');\n                if (currentServer && svEl.length > 0) {\n                    svEl.click();\n                } else {\n                    $('.servers-' + currentSource + ' .server-item').first().click();\n                }\n            } else {\n                if (parseInt(userSettings.enable_dub) === 1 && ($('.servers-mixed').length > 0 || $('.servers-dub').length > 0)) {\n                    if ($('.servers-mixed').length > 0) {\n                        $('.servers-mixed .server-item').first().click();\n                    } else if ($('.servers-dub').length > 0) {\n                        $('.servers-dub .server-item').first().click();\n                    }\n                } else {\n                    if ($('.servers-sub').length > 0) {\n                        $('.servers-sub .server-item').first().click();\n                    } else {\n                        $('.server-item').first().click();\n                    }\n                }\n            }\n        });\n    });\n</script>","totalItems":26}
+
+summary:
+========
+  * html:
+      <a href="/watch/claymore-844?ep=14677" title="Great Sword" class="item ep-item" data-number="1" data-id="14677">
+      <a href="/watch/claymore-844?ep=14678" title="The Black Card" class="item ep-item" data-number="2" data-id="14678">
+      <a href="/watch/claymore-844?ep=14679" title="The Darkness in Paradise" class="item ep-item" data-number="3" data-id="14679">
+      <a href="/watch/claymore-844?ep=14680" title="Clare&#39;s Awakening" class="item ep-item" data-number="4" data-id="14680">
+      <a href="/watch/claymore-844?ep=14681" title="Teresa of the Faint Smile" class="item ep-item" data-number="5" data-id="14681">
+      <a href="/watch/claymore-844?ep=14682" title="Teresa and Clare" class="item ep-item" data-number="6" data-id="14682">
+      <a href="/watch/claymore-844?ep=14683" title="Marked for Death" class="item ep-item" data-number="7" data-id="14683">
+      <a href="/watch/claymore-844?ep=14684" title="Awakening" class="item ep-item" data-number="8" data-id="14684">
+      <a href="/watch/claymore-844?ep=14685" title="Those Who Rend Asunder (Part 1)" class="item ep-item" data-number="9" data-id="14685">
+      <a href="/watch/claymore-844?ep=14686" title="Those Who Rend Asunder (Part 2)" class="item ep-item" data-number="10" data-id="14686">
+      <a href="/watch/claymore-844?ep=14687" title="Those Who Rend Asunder (Part 3)" class="item ep-item" data-number="11" data-id="14687">
+      <a href="/watch/claymore-844?ep=14688" title="The Endless Gravestones (Part 1)" class="item ep-item" data-number="12" data-id="14688">
+      <a href="/watch/claymore-844?ep=14689" title="The Endless Gravestones (Part 2)" class="item ep-item" data-number="13" data-id="14689">
+      <a href="/watch/claymore-844?ep=14690" title="Qualified to Fight" class="item ep-item" data-number="14" data-id="14690">
+      <a href="/watch/claymore-844?ep=14691" title="The Witch&#39;s Maw (Part 1)" class="item ep-item" data-number="15" data-id="14691">
+      <a href="/watch/claymore-844?ep=14692" title="The Witch&#39;s Maw (Part 2)" class="item ep-item" data-number="16" data-id="14692">
+      <a href="/watch/claymore-844?ep=14693" title="The Witch&#39;s Maw (Part 3)" class="item ep-item" data-number="17" data-id="14693">
+      <a href="/watch/claymore-844?ep=14694" title="The Carnage in the North (Part 1)" class="item ep-item" data-number="18" data-id="14694">
+      <a href="/watch/claymore-844?ep=14695" title="The Carnage in the North (Part 2)" class="item ep-item" data-number="19" data-id="14695">
+      <a href="/watch/claymore-844?ep=14696" title="The Carnage in the North (Part 3)" class="item ep-item" data-number="20" data-id="14696">
+      <a href="/watch/claymore-844?ep=14697" title="Invasion of Pieta (Part 1)" class="item ep-item" data-number="21" data-id="14697">
+      <a href="/watch/claymore-844?ep=14698" title="Invasion of Pieta (Part 2)" class="item ep-item" data-number="22" data-id="14698">
+      <a href="/watch/claymore-844?ep=14699" title="Critical Point (Part 1)" class="item ep-item" data-number="23" data-id="14699">
+      <a href="/watch/claymore-844?ep=14700" title="Critical Point (Part 2)" class="item ep-item" data-number="24" data-id="14700">
+      <a href="/watch/claymore-844?ep=14701" title="For Whose Sake" class="item ep-item" data-number="25" data-id="14701">
+      <a href="/watch/claymore-844?ep=14702" title="To the Successors" class="item ep-item" data-number="26" data-id="14702">
+  * code:
+      history.pushState({}, '', window.location.origin + window.location.pathname + '?ep=' + epId);
+
+--------------------------------------------------------------------------------
+// https://9anime.vc/ajax/vote/info/844
+
+{"status":true,"html":"<div class=\"anime-rating\">\n    <input id=\"input-vote\" type=\"number\" name=\"vote-value\" class=\"rating rating-loading\" data-min=\"0\" data-max=\"5\" \n           data-step=\"0.5\" value=\"3.75\">\n    <div class=\"anime_score\">7.5 of 2</div>\n</div>\n<script>\n    function voteSubmit(data) {\n        if (!loading) {\n            loading = true;\n            $.post('/ajax/vote/submit', data, function (res) {\n                $('#vote-loading').hide();\n                if (res.redirectTo) {\n                    window.location.href = res.redirectTo;\n                }\n                if (res.status) {\n                    $('#vote-info').html(res.html);\n                    toastr.success(res.msg, \"\", {timeout: 5000});\n                } else {\n                    toastr.error(res.msg, '', {timeOut: 5000});\n                }\n                loading = false;\n            });\n        }\n    }\n\n    $(\"#input-vote\").rating().on('rating.change', function (event, mark, caption) {\n        if (checkLogin()) {\n            if (typeof grecaptcha !== 'undefined') {\n                grecaptcha.execute(recaptchaSiteKey, {action: 'vote'}).then(function (_token) {\n                    voteSubmit({movieId, mark, _token});\n                })\n            } else {\n                voteSubmit({movieId, mark, _token: ''});\n            }\n        }\n    });\n</script>"}
+
+summary:
+========
+  * ignore
+
+--------------------------------------------------------------------------------
+// https://9anime.vc/ajax/watch-list/info/844?page=watch
+
+{"status":true}
+
+summary:
+========
+  * ignore
+
+--------------------------------------------------------------------------------
+// https://9anime.vc/ajax/episode/servers?episodeId=14677
+
+{"status":true,"html":"<div class=\"ps_-status\">\n    <div class=\"content\">\n        <div class=\"server-notice\"><strong>You are watching <b>Episode 1</b>.</strong> If current\n            server doesn't\n            work please try other servers below\n        </div>\n    </div>\n</div>\n\n<div class=\"ps_-block ps_-block-sub servers-sub\">\n    \n        <div class=\"ps__-title\"><i class=\"fas fa-closed-captioning mr-2\"></i>SUB:</div>\n    \n    \n    \n    \n    <div class=\"ps__-list\">\n        \n        <div class=\"item server-item\" data-type=\"sub\" data-id=\"186051\"\n             data-server-id=\"1\">\n            <a href=\"javascript:;\" class=\"btn\">Vidcloud</a>\n        </div>\n        \n    </div>\n    <div class=\"clearfix\"></div>\n    \n</div>\n\n<div class=\"ps_-block ps_-block-sub servers-dub\">\n    \n    \n        <div class=\"ps__-title\"><i class=\"fas fa-microphone-alt mr-2\"></i>DUB:</div>\n    \n    \n    \n    <div class=\"ps__-list\">\n        \n        <div class=\"item server-item\" data-type=\"dub\" data-id=\"210863\"\n             data-server-id=\"1\">\n            <a href=\"javascript:;\" class=\"btn\">Vidcloud</a>\n        </div>\n        \n    </div>\n    <div class=\"clearfix\"></div>\n    \n</div>\n\n<script>\n    $('.server-item').click(function () {\n        $('.server-item .btn').removeClass('active');\n        $(this).find('.btn').addClass('active');\n        var id = $(this).data('id');\n        if (typeof grecaptcha !== 'undefined') {\n            grecaptcha.execute(recaptchaSiteKey, {action: 'get_sources'}).then(function (token) {\n                getSources(id, token);\n            })\n        } else {\n            getSources(id, '');\n        }\n        localStorage.setItem('currentSource', $(this).data('type'));\n        localStorage.setItem('currentServer', $(this).data('server-id'));\n    });\n\n    function getSources(id, token) {\n        $('#source-guide').empty();\n        $.get('/ajax/episode/sources?id=' + id + '&_token=' + token, function (res) {\n            if (res.htmlGuide) {\n                $('#content-guide').removeClass('only-one');\n                $('#source-guide').html(res.htmlGuide);\n            }\n            if (res.link !== \"\") {\n                var linkIframe = res.link;\n                if ([1, 4].indexOf(parseInt(res.server)) >= 0) {\n                    linkIframe += \"&autoPlay=\" + userSettings.auto_play + \"&oa=\" + (userSettings.play_original_audio || 0)\n                }\n                $('#iframe-embed').attr('src', linkIframe);\n                $('#iframe-embed').show();\n            }\n        })\n    }\n</script>\n"}
+
+summary:
+========
+  * html
+      <div>
+        <div>SUB:</div>
+        <div>
+          <div class="item server-item" data-type="sub" data-id="186051" data-server-id="1">
+            <a href="javascript:;" class="btn">Vidcloud</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>DUB:</div>
+        <div>
+          <div class="item server-item" data-type="dub" data-id="210863" data-server-id="1">
+            <a href="javascript:;" class="btn">Vidcloud</a>
+          </div>
+        </div>
+      </div>
+  * code:
+      grecaptcha.execute(recaptchaSiteKey, {action: 'get_sources'}).then(function (token) {getSources(id, token);})
+      function getSources(id, token) { $.get('/ajax/episode/sources?id=' + id + '&_token=' + token, function (res) { var linkIframe = res.link; linkIframe += "&autoPlay=" + userSettings.auto_play + "&oa=" + (userSettings.play_original_audio || 0); $('#iframe-embed').attr('src', linkIframe); }); }
+      localStorage.setItem('currentSource', $(this).data('type'))
+      localStorage.setItem('currentServer', $(this).data('server-id'))
+
+--------------------------------------------------------------------------------
+// localStorage.getItem('currentSource')
+
+"sub"
+
+--------------------------------------------------------------------------------
+// localStorage.getItem('currentServer')
+
+1
+
+--------------------------------------------------------------------------------
+// localStorage.getItem('userSettings')
+
+'{"auto_play":1,"auto_next":1,"auto_load_comments":0,"enable_dub":0,"anime_name":"en","play_original_audio":0}'
+
+--------------------------------------------------------------------------------
+// localStorage.setItem('userSettings', '{"auto_play":0,"auto_next":0,"auto_load_comments":0,"enable_dub":0,"anime_name":"en","play_original_audio":0}')
+
+notes:
+======
+* does not prevent webpage for series from redirecting to webpage to first episode in series (ie: ?ep=14677)
+* changes querystring parameters for URL loaded into iframe,
+  which causes the embedded video player to require the user to manually click the play button
+
+--------------------------------------------------------------------------------
+// grecaptcha.execute(recaptchaSiteKey, {action: 'get_sources'}).then(console.log.bind(console, 'token:'))
+
+token: 03AGdBq264fuxNBlwiPi7NjN0JPw0YPpClSEDsMeDq6RR6CjaIXzuvglaZOd8hfJNx2qwC8GWrdhm_pUc_9j7NyCsEtRSomcckJxGSd9BZG6k2eTPlfY_7v6SPSi1hwkWnLqXLhhmJPof5QTmKQ2RFw3C47wnFSMkAt8QdLsUfIQUhtTigqe_yRq7adlGt4gkE6a4L5oGpgXKEELYMmljTlsvWP4m2fA7VvAooRpIhym1F_S_OXiTydwJY1QG-4Dxn_GQ2cKhSXt5Ra-xvn-KZ5AN-_CEp1dqiN1GXtcLyRhjBNBI8XlGz74Hw4duMMrhVFmCEWZzoHj1OYLEJfzjoTDCeJIT-dN3PUldB-wvRE8KH4SMmBnTiXcN_uqjM1kMkpcB10S8iC_qNb1NOtN4EnsBwjlubT2Y_UPtukY8O3CAdHEK8J7LaVu42qxSKZRtR6msRmSvvODV4
+
+--------------------------------------------------------------------------------
+// https://9anime.vc/ajax/episode/sources?id=186051&_token=03AGdBq264fuxNBlwiPi7NjN0JPw0YPpClSEDsMeDq6RR6CjaIXzuvglaZOd8hfJNx2qwC8GWrdhm_pUc_9j7NyCsEtRSomcckJxGSd9BZG6k2eTPlfY_7v6SPSi1hwkWnLqXLhhmJPof5QTmKQ2RFw3C47wnFSMkAt8QdLsUfIQUhtTigqe_yRq7adlGt4gkE6a4L5oGpgXKEELYMmljTlsvWP4m2fA7VvAooRpIhym1F_S_OXiTydwJY1QG-4Dxn_GQ2cKhSXt5Ra-xvn-KZ5AN-_CEp1dqiN1GXtcLyRhjBNBI8XlGz74Hw4duMMrhVFmCEWZzoHj1OYLEJfzjoTDCeJIT-dN3PUldB-wvRE8KH4SMmBnTiXcN_uqjM1kMkpcB10S8iC_qNb1NOtN4EnsBwjlubT2Y_UPtukY8O3CAdHEK8J7LaVu42qxSKZRtR6msRmSvvODV4
+
+{"type":"iframe","link":"https://rapid-cloud.ru/embed-6/11QwByi5LJZ5?z=","server":1,"sources":[],"tracks":[],"htmlGuide":""}
+
+notes:
+======
+* token is valid for a very brief duration
+
+--------------------------------------------------------------------------------
+// grecaptcha.execute(recaptchaSiteKey, {action: 'get_sources'}).then(token => fetch('https://9anime.vc/ajax/episode/sources?id=186051&_token=' + token)).then(response => response.text()).then(console.log)
+
+{"type":"iframe","link":"https://rapid-cloud.ru/embed-6/11QwByi5LJZ5?z=","server":1,"sources":[],"tracks":[],"htmlGuide":""}
+
+--------------------------------------------------------------------------------
