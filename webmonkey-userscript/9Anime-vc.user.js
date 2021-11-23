@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9Anime.vc
 // @description  Simplify website for speed and usability.
-// @version      1.0.1
+// @version      1.0.2
 // @match        *://9anime.vc/watch/*
 // @match        *://*.9anime.vc/watch/*
 // @icon         https://9anime.vc/images/favicon.png
@@ -31,7 +31,17 @@ var constants = {
 
 var state = {
   "series_id":       null,
-  "episode_id":      null
+  "episode_id":      null,
+  "token": {
+    "recaptcha_key": null
+  },
+  "did": {
+    "init":          false,
+    "process": {
+      "episodes":    false,
+      "servers":     false
+    }
+  }
 }
 
 // ----------------------------------------------------------------------------- helpers
@@ -129,8 +139,6 @@ var determine_series_id = function() {
 
     state.series_id = div ? div.getAttribute('data-id') : null
   }
-
-  return state.series_id
 }
 
 var determine_episode_id = function() {
@@ -142,8 +150,6 @@ var determine_episode_id = function() {
     if (match)
       state.episode_id = match[1]
   }
-
-  return state.episode_id
 }
 
 var determine_static_xhr_parameters = function() {
@@ -155,83 +161,106 @@ var determine_static_xhr_parameters = function() {
 
 // ----------------------------------------------------------------------------- reinitialize dom
 
-var reinitialize_dom = function() {
-  // reset DOM
+var reset_dom = function() {
+  var $recaptcha_script, recaptcha_src
+
+  state.token.recaptcha_key = unsafeWindow.recaptchaSiteKey
+  $recaptcha_script = unsafeWindow.document.querySelector('script[src*="google.com/recaptcha/api.js"]')
+  if ($recaptcha_script) {
+    recaptcha_src     = $recaptcha_script.getAttribute('src')
+    $recaptcha_script = null
+  }
+
+  delete unsafeWindow.window.grecaptcha
+
   unsafeWindow.document.close()
   unsafeWindow.document.write('')
   unsafeWindow.document.close()
 
+  if (recaptcha_src) {
+    $recaptcha_script = make_element('script')
+    $recaptcha_script.setAttribute('src', recaptcha_src)
+    unsafeWindow.document.body.appendChild($recaptcha_script)
+  }
+}
+
+var reinitialize_dom = function() {
+  reset_dom()
+
   var head = unsafeWindow.document.getElementsByTagName('head')[0]
   var body = unsafeWindow.document.body
-  var html
+  var html, $style, $div_root
 
   html = {
-    "head": [
-      '<style>',
+    "head": {
+      "css": [
+        // --------------------------------------------------- CSS: global
 
-      // --------------------------------------------------- CSS: global
+        'body {',
+        '  background-color: #fff;',
+        '}',
 
-      'body {',
-      '  background-color: #fff;',
-      '}',
+        'body > * {',
+        '  display: none !important;',
+        '}',
 
-      'body > * {',
-      '  display: none !important;',
-      '}',
+        'body > #' + constants.dom_ids.div_root + ' {',
+        '  display: block !important;',
+        '}',
 
-      'body > #' + constants.dom_ids.div_root + ' {',
-      '  display: block !important;',
-      '}',
+        // --------------------------------------------------- CSS: list of episodes
 
-      // --------------------------------------------------- CSS: list of episodes
+        'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_episodes + ' > ul > li > a {',
+        '  text-decoration: none;',
+        '}',
 
-      'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_episodes + ' > ul > li > a {',
-      '  text-decoration: none;',
-      '}',
+        // --------------------------------------------------- CSS: list of servers
 
-      // --------------------------------------------------- CSS: list of servers
+        'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_servers + ' > ul,',
+        'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_servers + ' > ul > li {',
+        '  list-style: none;',
+        '}',
 
-      'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_servers + ' > ul,',
-      'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_servers + ' > ul > li {',
-      '  list-style: none;',
-      '}',
+        'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_servers + ' > ul > li,',
+        'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_servers + ' > ul > li > button {',
+        '  display: inline-block;',
+        '}',
 
-      'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_servers + ' > ul > li,',
-      'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_servers + ' > ul > li > button {',
-      '  display: inline-block;',
-      '}',
+        'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_servers + ' > ul > li > button {',
+        '  margin-right: 0.5em;',
+        '}',
 
-      'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_servers + ' > ul > li > button {',
-      '  margin-right: 0.5em;',
-      '}',
+        // --------------------------------------------------- CSS: iframe
 
-      // --------------------------------------------------- CSS: iframe
-
-      'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_iframe + ' > iframe {',
-      '}',
-
-      '</style>'
-    ],
-    "body": [
-      '<div id="' + constants.dom_ids.div_root + '">',
-      '  <div id="' + constants.dom_ids.div_episodes + '"><ul></ul></div>',
-      '  <div id="' + constants.dom_ids.div_servers  + '"><ul></ul></div>',
-      '  <div id="' + constants.dom_ids.div_iframe   + '">',
-      '    <iframe src="about:blank" width="100%" height="600" scrolling="no" frameborder="0" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>',
-      '  </div>',
-      '</div>'
-    ]
+        'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_iframe + ' > iframe {',
+        '}'
+      ]
+    },
+    "body": {
+      "div_root": [
+        '  <div id="' + constants.dom_ids.div_episodes + '"><ul></ul></div>',
+        '  <div id="' + constants.dom_ids.div_servers  + '"><ul></ul></div>',
+        '  <div id="' + constants.dom_ids.div_iframe   + '">',
+        '    <iframe src="about:blank" width="100%" height="600" scrolling="no" frameborder="0" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>',
+        '  </div>'
+      ]
+    }
   }
 
-  head.innerHTML = '' + html.head.join("\n")
-  body.innerHTML = '' + html.body.join("\n")
+  $style    = make_element('style', html.head.css.join("\n"))
+  $div_root = make_element('div',   html.body.div_root.join("\n"))
+
+  $div_root.setAttribute('id', constants.dom_ids.div_root)
+
+  head.appendChild($style)
+  body.appendChild($div_root)
 }
 
 // ----------------------------------------------------------------------------- determine dynamic XHR parameters
 
 var determine_xhr_token = function(callback) {
   try {
-    unsafeWindow.grecaptcha.execute(unsafeWindow.recaptchaSiteKey, {action: 'get_sources'}).then(function(token) {
+    unsafeWindow.window.grecaptcha.execute(state.token.recaptcha_key, {action: 'get_sources'}).then(function(token) {
       if (token) {
         callback(token)
       }
@@ -243,7 +272,7 @@ var determine_xhr_token = function(callback) {
 // ----------------------------------------------------------------------------- trigger XHR requests
 
 var trigger_xhr_episodes_list = function() {
-  url = unsafeWindow.location.protocol + '//' + unsafeWindow.location.hostname + '/ajax/episode/list/' + state.series_id
+  var url = unsafeWindow.location.protocol + '//' + unsafeWindow.location.hostname + '/ajax/episode/list/' + state.series_id
 
   download_json(url, null, process_xhr_episodes_list)
 }
@@ -251,7 +280,7 @@ var trigger_xhr_episodes_list = function() {
 var trigger_xhr_episode_servers = function() {
   if (!state.episode_id) return
 
-  url = unsafeWindow.location.protocol + '//' + unsafeWindow.location.hostname + '/ajax/episode/servers?episodeId=' + state.episode_id
+  var url = unsafeWindow.location.protocol + '//' + unsafeWindow.location.hostname + '/ajax/episode/servers?episodeId=' + state.episode_id
 
   download_json(url, null, process_xhr_episode_servers)
 }
@@ -260,7 +289,7 @@ var trigger_xhr_episode_server_source = function(server_id) {
   if (!server_id) return
 
   var callback = function(token) {
-    url = unsafeWindow.location.protocol + '//' + unsafeWindow.location.hostname + '/ajax/episode/sources?id=' + server_id + '&_token=' + token
+    var url = unsafeWindow.location.protocol + '//' + unsafeWindow.location.hostname + '/ajax/episode/sources?id=' + server_id + '&_token=' + token
 
     download_json(url, null, process_xhr_episode_server_source)
   }
@@ -271,6 +300,9 @@ var trigger_xhr_episode_server_source = function(server_id) {
 // ----------------------------------------------------------------------------- process XHR responses
 
 var process_xhr_episodes_list = function(data) {
+  if (state.did.process.episodes) return
+  state.did.process.episodes = true
+
   try {
     var $container, $a, $li
 
@@ -300,6 +332,9 @@ var process_xhr_episodes_list = function(data) {
 }
 
 var process_xhr_episode_servers = function(data) {
+  if (state.did.process.servers) return
+  state.did.process.servers = true
+
   try {
     var $container, $div, label, server_id, $button, $li
 
@@ -382,9 +417,29 @@ var clear_all_intervals = function() {
   }
 }
 
+var intercept_history_redirects = function() {
+  var interceptor = function(state, title, url) {
+    if (url !== unsafeWindow.location.href) {
+      redirect_to_url(url)
+      unsafeWindow.console.log('window.history state has changed')
+    }
+  }
+
+  if (unsafeWindow.history) {
+    unsafeWindow.history.pushState    = interceptor
+    unsafeWindow.history.replaceState = interceptor
+  }
+}
+
 var init = function() {
+  if (('function' === (typeof GM_getUrl)) && (GM_getUrl() !== unsafeWindow.location.href)) return
+
+  if (state.did.init) return
+  state.did.init = true
+
   clear_all_timeouts()
   clear_all_intervals()
+  intercept_history_redirects()
 
   determine_static_xhr_parameters()
   if (!state.series_id) return
