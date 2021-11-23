@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9Anime.vc
 // @description  Simplify website for speed and usability.
-// @version      1.0.3
+// @version      1.0.4
 // @match        *://9anime.vc/*
 // @match        *://*.9anime.vc/*
 // @icon         https://9anime.vc/images/favicon.png
@@ -20,10 +20,13 @@
 
 var constants = {
   "dom_ids": {
-    "div_root":      "app_9anime_container",
-    "div_episodes":  "episodes_list_container",
-    "div_servers":   "servers_list_container",
-    "div_iframe":    "iframe_container"
+    "div_root":       "app_9anime_container",
+    "div_episodes":   "episodes_list_container",
+    "div_servers":    "servers_list_container",
+    "div_iframe":     "iframe_container"
+  },
+  "dom_classes": {
+    "a_current_page": "current_page"
   }
 }
 
@@ -212,6 +215,16 @@ var reinitialize_dom = function() {
 
         'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_episodes + ' > ul > li > a {',
         '  text-decoration: none;',
+        '  line-height: 1.5em;',
+        '}',
+
+        'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_episodes + ' > ul > li > a.' + constants.dom_classes.a_current_page + ' {',
+        '  pointer-events: none;',
+        '  cursor: default;',
+        '  color: inherit;',
+        '  font-weight: bold;',
+        '  font-style: italic;',
+        '  font-size: 1.25em;',
         '}',
 
         // --------------------------------------------------- CSS: list of servers
@@ -326,6 +339,14 @@ var process_xhr_episodes_list = function(data) {
 
       $li.appendChild($a[i])
       $container.appendChild($li)
+    }
+
+    // add css class to anchor for current page
+    if (unsafeWindow.location.search) {
+      $a = $container.querySelector('a[href*="' + unsafeWindow.location.search + '"]')
+
+      if ($a)
+        $a.classList.add(constants.dom_classes.a_current_page)
     }
   }
   catch(e) {}
