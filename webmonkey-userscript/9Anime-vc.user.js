@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9Anime.vc
 // @description  Simplify website for speed and usability.
-// @version      1.0.6
+// @version      1.0.7
 // @match        *://9anime.vc/*
 // @match        *://*.9anime.vc/*
 // @icon         https://9anime.vc/images/favicon.png
@@ -471,12 +471,15 @@ var init = function() {
     return
   }
 
-  intercept_history_redirects()
-
-  if (unsafeWindow.location.pathname.indexOf('/watch/') !== 0) return
+  if (unsafeWindow.window.did_userscript_init) return
+  unsafeWindow.window.did_userscript_init = true
 
   if (state.did.init) return
   state.did.init = true
+
+  intercept_history_redirects()
+
+  if (unsafeWindow.location.pathname.indexOf('/watch/') !== 0) return
 
   clear_all_timeouts()
   clear_all_intervals()
