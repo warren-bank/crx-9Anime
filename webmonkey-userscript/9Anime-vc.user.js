@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9Anime.vc
 // @description  Simplify website for speed and usability.
-// @version      1.0.4
+// @version      1.0.5
 // @match        *://9anime.vc/*
 // @match        *://*.9anime.vc/*
 // @icon         https://9anime.vc/images/favicon.png
@@ -342,8 +342,8 @@ var process_xhr_episodes_list = function(data) {
     }
 
     // add css class to anchor for current page
-    if (unsafeWindow.location.search) {
-      $a = $container.querySelector('a[href*="' + unsafeWindow.location.search + '"]')
+    if (state.episode_id) {
+      $a = $container.querySelector('a[href*="ep=' + state.episode_id + '"]')
 
       if ($a)
         $a.classList.add(constants.dom_classes.a_current_page)
