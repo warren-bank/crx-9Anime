@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         9Anime.vc
 // @description  Simplify website for speed and usability.
-// @version      1.0.5
+// @version      1.0.6
 // @match        *://9anime.vc/*
 // @match        *://*.9anime.vc/*
 // @icon         https://9anime.vc/images/favicon.png
@@ -26,6 +26,9 @@ var constants = {
     "div_iframe":     "iframe_container"
   },
   "dom_classes": {
+    "div_root": {
+      "is_webmonkey": "webmonkey"
+    },
     "a_current_page": "current_page"
   }
 }
@@ -37,6 +40,9 @@ var state = {
   "episode_id":      null,
   "token": {
     "recaptcha_key": null
+  },
+  "is": {
+    "webmonkey":     false
   },
   "did": {
     "init":          false,
@@ -246,6 +252,10 @@ var reinitialize_dom = function() {
         // --------------------------------------------------- CSS: iframe
 
         'body > #' + constants.dom_ids.div_root + ' #' + constants.dom_ids.div_iframe + ' > iframe {',
+        '}',
+
+        'body > #' + constants.dom_ids.div_root + '.' + constants.dom_classes.div_root.is_webmonkey + ' #' + constants.dom_ids.div_iframe + ' > iframe {',
+        '  display: none;',
         '}'
       ]
     },
@@ -264,6 +274,9 @@ var reinitialize_dom = function() {
   $div_root = make_element('div',   html.body.div_root.join("\n"))
 
   $div_root.setAttribute('id', constants.dom_ids.div_root)
+
+  if (state.is.webmonkey)
+    $div_root.classList.add(constants.dom_classes.div_root.is_webmonkey)
 
   head.appendChild($style)
   body.appendChild($div_root)
@@ -406,7 +419,7 @@ var process_xhr_episode_server_source = function(data) {
     if ((data.type === 'iframe') && data.link) {
       var video_host_url = data.link
 
-      if (typeof GM_loadUrl === 'function') {
+      if (state.is.webmonkey) {
         redirect_to_url(video_host_url)
       }
       else {
@@ -470,6 +483,8 @@ var init = function() {
 
   determine_static_xhr_parameters()
   if (!state.series_id) return
+
+  state.is.webmonkey = (typeof GM_loadUrl === 'function')
 
   reinitialize_dom()
   trigger_xhr_episodes_list()
