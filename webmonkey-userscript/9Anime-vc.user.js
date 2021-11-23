@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         9Anime.vc
 // @description  Simplify website for speed and usability.
-// @version      1.0.2
-// @match        *://9anime.vc/watch/*
-// @match        *://*.9anime.vc/watch/*
+// @version      1.0.3
+// @match        *://9anime.vc/*
+// @match        *://*.9anime.vc/*
 // @icon         https://9anime.vc/images/favicon.png
 // @run-at       document-end
 // @grant        unsafeWindow
@@ -401,6 +401,20 @@ var process_xhr_episode_server_source = function(data) {
 
 // ----------------------------------------------------------------------------- bootstrap
 
+var intercept_history_redirects = function() {
+  var interceptor = function(state, title, url) {
+    if (url !== unsafeWindow.location.href) {
+      redirect_to_url(url)
+      unsafeWindow.console.log('window.history state has changed')
+    }
+  }
+
+  if (unsafeWindow.history) {
+    unsafeWindow.history.pushState    = interceptor
+    unsafeWindow.history.replaceState = interceptor
+  }
+}
+
 var clear_all_timeouts = function() {
   var maxId = unsafeWindow.setTimeout(function(){}, 1000)
 
@@ -417,29 +431,21 @@ var clear_all_intervals = function() {
   }
 }
 
-var intercept_history_redirects = function() {
-  var interceptor = function(state, title, url) {
-    if (url !== unsafeWindow.location.href) {
-      redirect_to_url(url)
-      unsafeWindow.console.log('window.history state has changed')
-    }
-  }
-
-  if (unsafeWindow.history) {
-    unsafeWindow.history.pushState    = interceptor
-    unsafeWindow.history.replaceState = interceptor
-  }
-}
-
 var init = function() {
-  if (('function' === (typeof GM_getUrl)) && (GM_getUrl() !== unsafeWindow.location.href)) return
+  if (('function' === (typeof GM_getUrl)) && (GM_getUrl() !== unsafeWindow.location.href)) {
+    redirect_to_url(unsafeWindow.location.href)
+    return
+  }
+
+  intercept_history_redirects()
+
+  if (unsafeWindow.location.pathname.indexOf('/watch/') !== 0) return
 
   if (state.did.init) return
   state.did.init = true
 
   clear_all_timeouts()
   clear_all_intervals()
-  intercept_history_redirects()
 
   determine_static_xhr_parameters()
   if (!state.series_id) return
