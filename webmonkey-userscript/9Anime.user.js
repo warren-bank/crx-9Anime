@@ -1,16 +1,15 @@
 // ==UserScript==
-// @name         9Anime.vc
+// @name         9Anime
 // @description  Simplify website for speed and usability.
-// @version      1.0.7
-// @match        *://9anime.vc/*
-// @match        *://*.9anime.vc/*
-// @icon         https://9anime.vc/images/favicon.png
+// @version      1.0.8
+// @include      /^https?:\/\/(?:[^\.\/]*\.)*(?:9anime\.(?:vc|se)|9animes\.(?:org|ph)|9anime2\.(?:com)|9animetv\.(?:to)|ssoap2day\.(?:to)|9anime-tv\.(?:com))\/.*$/
+// @icon         https://9anime.se/images/favicon.png
 // @run-at       document-end
 // @grant        unsafeWindow
-// @homepage     https://github.com/warren-bank/crx-9Anime-vc/tree/webmonkey-userscript/es5
-// @supportURL   https://github.com/warren-bank/crx-9Anime-vc/issues
-// @downloadURL  https://github.com/warren-bank/crx-9Anime-vc/raw/webmonkey-userscript/es5/webmonkey-userscript/9Anime-vc.user.js
-// @updateURL    https://github.com/warren-bank/crx-9Anime-vc/raw/webmonkey-userscript/es5/webmonkey-userscript/9Anime-vc.user.js
+// @homepage     https://github.com/warren-bank/crx-9Anime/tree/webmonkey-userscript/es5
+// @supportURL   https://github.com/warren-bank/crx-9Anime/issues
+// @downloadURL  https://github.com/warren-bank/crx-9Anime/raw/webmonkey-userscript/es5/webmonkey-userscript/9Anime.user.js
+// @updateURL    https://github.com/warren-bank/crx-9Anime/raw/webmonkey-userscript/es5/webmonkey-userscript/9Anime.user.js
 // @namespace    warren-bank
 // @author       Warren Bank
 // @copyright    Warren Bank
